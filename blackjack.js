@@ -44,7 +44,7 @@ function startGame() {
         dealerSum += getValue(card);
         dealerAceCount += checkAce(card)
         const cardImg = document.createElement('img')
-        cardImg.src = '/cards/' + card + '.png'
+        cardImg.src = './cards/' + card + '.png'
         document.getElementById('dealer-cards').append(cardImg)
     }
 
@@ -53,7 +53,7 @@ function startGame() {
         playerSum += getValue(playerCard);
         playerAceCount += checkAce(playerCard)
         const playerCardImg = document.createElement('img')
-        playerCardImg.src = '/cards/' + playerCard + '.png'
+        playerCardImg.src = './cards/' + playerCard + '.png'
         document.getElementById('your-cards').append(playerCardImg)
     }
 
@@ -81,7 +81,7 @@ function hitCard() {
     const hitCard = deck.pop()
     playerSum += getValue(hitCard);
     const playerCardImg = document.createElement('img')
-    playerCardImg.src = '/cards/' + hitCard + '.png'
+    playerCardImg.src = './cards/' + hitCard + '.png'
     document.getElementById('your-cards').append(playerCardImg)
 
     if (reduceAce(playerSum, playerAceCount) > 21) { //A, J, 8 -> 1 + 10 + 8
